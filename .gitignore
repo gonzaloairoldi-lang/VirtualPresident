@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.npm-global/
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Env files (nunca commitear secretos)
+.env
+.env.local
+.env.*.local
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+*.log
+
+# Vercel
+.vercel
+
+# Claude Code local config
+.claude/

@@ -1,0 +1,58 @@
+:root {
+  /* Color — "sala de situación", de noche, papel viejo, sellos oficiales */
+  --bg-deep: #0b0e11;
+  --bg-panel: #14181d;
+  --bg-panel-raised: #1b2027;
+  --line: #2a3038;
+  --paper: #e8e4d9;
+  --paper-dim: #a8a395;
+  --amber: #d9a441;
+  --amber-dim: #8a6a2c;
+  --alert: #b33a3a;
+  --positive: #5c8a6e;
+
+  /* Tipografía */
+  --font-display: "Spectral", Georgia, serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+  --font-ui: "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg-deep);
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    rgba(217, 164, 65, 0.04),
+    transparent 60%
+  );
+  color: var(--paper);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
