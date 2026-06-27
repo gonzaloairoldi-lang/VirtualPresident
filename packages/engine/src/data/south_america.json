@@ -1,0 +1,1970 @@
+{
+  "_note": "Valores del Index of Economic Freedom (0-100). Para 1989 son estimaciones calibradas con datos históricos (el índice empezó en 1995). Para 2024 son valores reales del índice Heritage Foundation.",
+  "_variables": {
+    "property_rights": "Protección de propiedad privada y contratos",
+    "government_integrity": "Corrupción percibida (inversa: 100 = sin corrupción)",
+    "judicial_effectiveness": "Independencia y eficacia del poder judicial",
+    "tax_burden": "Carga impositiva (inversa: 100 = impuestos bajos)",
+    "government_spending": "Gasto público (inversa: 100 = gasto mínimo)",
+    "fiscal_health": "Salud fiscal / deuda pública (100 = superávit)",
+    "business_freedom": "Facilidad para abrir y operar empresas",
+    "labor_freedom": "Flexibilidad del mercado laboral",
+    "monetary_freedom": "Estabilidad monetaria y control de precios",
+    "trade_freedom": "Aranceles y barreras al comercio exterior",
+    "investment_freedom": "Libertad para invertir capital (nacional y extranjero)",
+    "financial_freedom": "Independencia del sistema bancario del Estado"
+  },
+  "scenarios": {
+    "1989": {
+      "countries": [
+        {
+          "id": "argentina",
+          "name": "Argentina",
+          "capital": "Buenos Aires",
+          "region": "América del Sur",
+          "leader_id": "carlos_menem",
+          "parties": [
+            {
+              "id": "arg_pj",
+              "name": "Partido Justicialista (Peronismo)",
+              "short": "PJ",
+              "founded": 1945,
+              "ideology": "Peronismo / Populismo nacional",
+              "ranges": {
+                "property_rights":       { "min": 30, "max": 55 },
+                "government_integrity":  { "min": 20, "max": 40 },
+                "judicial_effectiveness":{ "min": 25, "max": 45 },
+                "tax_burden":            { "min": 35, "max": 55 },
+                "government_spending":   { "min": 20, "max": 40 },
+                "fiscal_health":         { "min": 10, "max": 35 },
+                "business_freedom":      { "min": 30, "max": 55 },
+                "labor_freedom":         { "min": 25, "max": 45 },
+                "monetary_freedom":      { "min": 15, "max": 40 },
+                "trade_freedom":         { "min": 25, "max": 50 },
+                "investment_freedom":    { "min": 20, "max": 45 },
+                "financial_freedom":     { "min": 20, "max": 40 }
+              }
+            },
+            {
+              "id": "arg_ucr",
+              "name": "Unión Cívica Radical",
+              "short": "UCR",
+              "founded": 1891,
+              "ideology": "Social-liberalismo / Centro",
+              "ranges": {
+                "property_rights":       { "min": 45, "max": 65 },
+                "government_integrity":  { "min": 40, "max": 60 },
+                "judicial_effectiveness":{ "min": 45, "max": 65 },
+                "tax_burden":            { "min": 40, "max": 60 },
+                "government_spending":   { "min": 30, "max": 50 },
+                "fiscal_health":         { "min": 25, "max": 50 },
+                "business_freedom":      { "min": 45, "max": 65 },
+                "labor_freedom":         { "min": 35, "max": 55 },
+                "monetary_freedom":      { "min": 35, "max": 55 },
+                "trade_freedom":         { "min": 40, "max": 60 },
+                "investment_freedom":    { "min": 40, "max": 60 },
+                "financial_freedom":     { "min": 35, "max": 55 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "carlos_menem",
+              "name": "Carlos Menem",
+              "party_id": "arg_pj",
+              "values": {
+                "property_rights": 40,
+                "government_integrity": 22,
+                "judicial_effectiveness": 30,
+                "tax_burden": 42,
+                "government_spending": 28,
+                "fiscal_health": 15,
+                "business_freedom": 45,
+                "labor_freedom": 30,
+                "monetary_freedom": 20,
+                "trade_freedom": 38,
+                "investment_freedom": 35,
+                "financial_freedom": 30
+              }
+            },
+            {
+              "id": "raul_alfonsin",
+              "name": "Raúl Alfonsín",
+              "party_id": "arg_ucr",
+              "values": {
+                "property_rights": 55,
+                "government_integrity": 55,
+                "judicial_effectiveness": 60,
+                "tax_burden": 48,
+                "government_spending": 38,
+                "fiscal_health": 28,
+                "business_freedom": 52,
+                "labor_freedom": 45,
+                "monetary_freedom": 38,
+                "trade_freedom": 50,
+                "investment_freedom": 50,
+                "financial_freedom": 45
+              }
+            }
+          ]
+        },
+        {
+          "id": "brazil",
+          "name": "Brasil",
+          "capital": "Brasilia",
+          "region": "América del Sur",
+          "leader_id": "jose_sarney",
+          "parties": [
+            {
+              "id": "bra_pmdb",
+              "name": "Partido do Movimento Democrático Brasileiro",
+              "short": "PMDB",
+              "founded": 1980,
+              "ideology": "Centro / Catch-all",
+              "ranges": {
+                "property_rights":       { "min": 35, "max": 55 },
+                "government_integrity":  { "min": 25, "max": 45 },
+                "judicial_effectiveness":{ "min": 30, "max": 50 },
+                "tax_burden":            { "min": 30, "max": 50 },
+                "government_spending":   { "min": 25, "max": 45 },
+                "fiscal_health":         { "min": 20, "max": 40 },
+                "business_freedom":      { "min": 35, "max": 55 },
+                "labor_freedom":         { "min": 30, "max": 50 },
+                "monetary_freedom":      { "min": 25, "max": 45 },
+                "trade_freedom":         { "min": 30, "max": 50 },
+                "investment_freedom":    { "min": 30, "max": 50 },
+                "financial_freedom":     { "min": 25, "max": 45 }
+              }
+            },
+            {
+              "id": "bra_pt",
+              "name": "Partido dos Trabalhadores",
+              "short": "PT",
+              "founded": 1980,
+              "ideology": "Socialismo democrático / Izquierda",
+              "ranges": {
+                "property_rights":       { "min": 20, "max": 40 },
+                "government_integrity":  { "min": 40, "max": 65 },
+                "judicial_effectiveness":{ "min": 35, "max": 55 },
+                "tax_burden":            { "min": 20, "max": 38 },
+                "government_spending":   { "min": 10, "max": 30 },
+                "fiscal_health":         { "min": 15, "max": 35 },
+                "business_freedom":      { "min": 25, "max": 45 },
+                "labor_freedom":         { "min": 20, "max": 40 },
+                "monetary_freedom":      { "min": 30, "max": 50 },
+                "trade_freedom":         { "min": 25, "max": 45 },
+                "investment_freedom":    { "min": 20, "max": 38 },
+                "financial_freedom":     { "min": 20, "max": 38 }
+              }
+            },
+            {
+              "id": "bra_prn",
+              "name": "Partido da Reconstrução Nacional",
+              "short": "PRN",
+              "founded": 1989,
+              "ideology": "Liberal-conservadurismo / Centro-derecha",
+              "ranges": {
+                "property_rights":       { "min": 45, "max": 65 },
+                "government_integrity":  { "min": 30, "max": 50 },
+                "judicial_effectiveness":{ "min": 35, "max": 55 },
+                "tax_burden":            { "min": 45, "max": 65 },
+                "government_spending":   { "min": 40, "max": 60 },
+                "fiscal_health":         { "min": 35, "max": 55 },
+                "business_freedom":      { "min": 50, "max": 70 },
+                "labor_freedom":         { "min": 45, "max": 65 },
+                "monetary_freedom":      { "min": 40, "max": 60 },
+                "trade_freedom":         { "min": 45, "max": 65 },
+                "investment_freedom":    { "min": 45, "max": 65 },
+                "financial_freedom":     { "min": 40, "max": 60 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "jose_sarney",
+              "name": "José Sarney",
+              "party_id": "bra_pmdb",
+              "values": {
+                "property_rights": 42,
+                "government_integrity": 30,
+                "judicial_effectiveness": 38,
+                "tax_burden": 38,
+                "government_spending": 32,
+                "fiscal_health": 25,
+                "business_freedom": 42,
+                "labor_freedom": 38,
+                "monetary_freedom": 28,
+                "trade_freedom": 35,
+                "investment_freedom": 35,
+                "financial_freedom": 32
+              }
+            },
+            {
+              "id": "lula",
+              "name": "Luiz Inácio Lula da Silva",
+              "party_id": "bra_pt",
+              "values": {
+                "property_rights": 28,
+                "government_integrity": 58,
+                "judicial_effectiveness": 45,
+                "tax_burden": 25,
+                "government_spending": 18,
+                "fiscal_health": 20,
+                "business_freedom": 32,
+                "labor_freedom": 25,
+                "monetary_freedom": 38,
+                "trade_freedom": 30,
+                "investment_freedom": 25,
+                "financial_freedom": 25
+              }
+            },
+            {
+              "id": "collor",
+              "name": "Fernando Collor de Mello",
+              "party_id": "bra_prn",
+              "values": {
+                "property_rights": 58,
+                "government_integrity": 35,
+                "judicial_effectiveness": 42,
+                "tax_burden": 58,
+                "government_spending": 52,
+                "fiscal_health": 45,
+                "business_freedom": 62,
+                "labor_freedom": 58,
+                "monetary_freedom": 50,
+                "trade_freedom": 58,
+                "investment_freedom": 55,
+                "financial_freedom": 50
+              }
+            }
+          ]
+        },
+        {
+          "id": "chile",
+          "name": "Chile",
+          "capital": "Santiago",
+          "region": "América del Sur",
+          "leader_id": "augusto_pinochet",
+          "parties": [
+            {
+              "id": "chl_rn",
+              "name": "Renovación Nacional",
+              "short": "RN",
+              "founded": 1987,
+              "ideology": "Conservadurismo liberal / Centro-derecha",
+              "ranges": {
+                "property_rights":       { "min": 60, "max": 80 },
+                "government_integrity":  { "min": 40, "max": 60 },
+                "judicial_effectiveness":{ "min": 45, "max": 65 },
+                "tax_burden":            { "min": 55, "max": 75 },
+                "government_spending":   { "min": 50, "max": 70 },
+                "fiscal_health":         { "min": 50, "max": 70 },
+                "business_freedom":      { "min": 60, "max": 80 },
+                "labor_freedom":         { "min": 55, "max": 75 },
+                "monetary_freedom":      { "min": 55, "max": 75 },
+                "trade_freedom":         { "min": 60, "max": 80 },
+                "investment_freedom":    { "min": 60, "max": 80 },
+                "financial_freedom":     { "min": 55, "max": 75 }
+              }
+            },
+            {
+              "id": "chl_concertacion",
+              "name": "Concertación de Partidos por la Democracia",
+              "short": "Concertación",
+              "founded": 1988,
+              "ideology": "Centro / Social-democracia",
+              "ranges": {
+                "property_rights":       { "min": 45, "max": 65 },
+                "government_integrity":  { "min": 55, "max": 75 },
+                "judicial_effectiveness":{ "min": 55, "max": 75 },
+                "tax_burden":            { "min": 40, "max": 60 },
+                "government_spending":   { "min": 35, "max": 55 },
+                "fiscal_health":         { "min": 40, "max": 60 },
+                "business_freedom":      { "min": 50, "max": 70 },
+                "labor_freedom":         { "min": 40, "max": 60 },
+                "monetary_freedom":      { "min": 50, "max": 70 },
+                "trade_freedom":         { "min": 55, "max": 75 },
+                "investment_freedom":    { "min": 50, "max": 70 },
+                "financial_freedom":     { "min": 45, "max": 65 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "augusto_pinochet",
+              "name": "Augusto Pinochet",
+              "party_id": "chl_rn",
+              "values": {
+                "property_rights": 72,
+                "government_integrity": 25,
+                "judicial_effectiveness": 30,
+                "tax_burden": 70,
+                "government_spending": 65,
+                "fiscal_health": 65,
+                "business_freedom": 75,
+                "labor_freedom": 70,
+                "monetary_freedom": 68,
+                "trade_freedom": 75,
+                "investment_freedom": 72,
+                "financial_freedom": 68
+              }
+            },
+            {
+              "id": "patricio_aylwin",
+              "name": "Patricio Aylwin",
+              "party_id": "chl_concertacion",
+              "values": {
+                "property_rights": 58,
+                "government_integrity": 68,
+                "judicial_effectiveness": 65,
+                "tax_burden": 52,
+                "government_spending": 45,
+                "fiscal_health": 52,
+                "business_freedom": 62,
+                "labor_freedom": 50,
+                "monetary_freedom": 60,
+                "trade_freedom": 65,
+                "investment_freedom": 60,
+                "financial_freedom": 55
+              }
+            }
+          ]
+        },
+        {
+          "id": "colombia",
+          "name": "Colombia",
+          "capital": "Bogotá",
+          "region": "América del Sur",
+          "leader_id": "virgilio_barco",
+          "parties": [
+            {
+              "id": "col_liberal",
+              "name": "Partido Liberal Colombiano",
+              "short": "Liberal",
+              "founded": 1848,
+              "ideology": "Liberalismo / Centro",
+              "ranges": {
+                "property_rights":       { "min": 35, "max": 55 },
+                "government_integrity":  { "min": 25, "max": 45 },
+                "judicial_effectiveness":{ "min": 25, "max": 45 },
+                "tax_burden":            { "min": 40, "max": 60 },
+                "government_spending":   { "min": 30, "max": 50 },
+                "fiscal_health":         { "min": 30, "max": 50 },
+                "business_freedom":      { "min": 40, "max": 60 },
+                "labor_freedom":         { "min": 35, "max": 55 },
+                "monetary_freedom":      { "min": 40, "max": 60 },
+                "trade_freedom":         { "min": 40, "max": 60 },
+                "investment_freedom":    { "min": 35, "max": 55 },
+                "financial_freedom":     { "min": 35, "max": 55 }
+              }
+            },
+            {
+              "id": "col_conservador",
+              "name": "Partido Conservador Colombiano",
+              "short": "Conservador",
+              "founded": 1849,
+              "ideology": "Conservadurismo / Centro-derecha",
+              "ranges": {
+                "property_rights":       { "min": 45, "max": 65 },
+                "government_integrity":  { "min": 30, "max": 50 },
+                "judicial_effectiveness":{ "min": 35, "max": 55 },
+                "tax_burden":            { "min": 45, "max": 65 },
+                "government_spending":   { "min": 40, "max": 60 },
+                "fiscal_health":         { "min": 35, "max": 55 },
+                "business_freedom":      { "min": 45, "max": 65 },
+                "labor_freedom":         { "min": 40, "max": 60 },
+                "monetary_freedom":      { "min": 45, "max": 65 },
+                "trade_freedom":         { "min": 45, "max": 65 },
+                "investment_freedom":    { "min": 40, "max": 60 },
+                "financial_freedom":     { "min": 40, "max": 60 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "virgilio_barco",
+              "name": "Virgilio Barco",
+              "party_id": "col_liberal",
+              "values": {
+                "property_rights": 42,
+                "government_integrity": 32,
+                "judicial_effectiveness": 30,
+                "tax_burden": 48,
+                "government_spending": 38,
+                "fiscal_health": 38,
+                "business_freedom": 48,
+                "labor_freedom": 42,
+                "monetary_freedom": 48,
+                "trade_freedom": 48,
+                "investment_freedom": 42,
+                "financial_freedom": 40
+              }
+            },
+            {
+              "id": "alvaro_gomez",
+              "name": "Álvaro Gómez Hurtado",
+              "party_id": "col_conservador",
+              "values": {
+                "property_rights": 58,
+                "government_integrity": 42,
+                "judicial_effectiveness": 48,
+                "tax_burden": 55,
+                "government_spending": 52,
+                "fiscal_health": 48,
+                "business_freedom": 58,
+                "labor_freedom": 52,
+                "monetary_freedom": 55,
+                "trade_freedom": 55,
+                "investment_freedom": 52,
+                "financial_freedom": 50
+              }
+            }
+          ]
+        },
+        {
+          "id": "venezuela",
+          "name": "Venezuela",
+          "capital": "Caracas",
+          "region": "América del Sur",
+          "leader_id": "carlos_andres_perez",
+          "parties": [
+            {
+              "id": "ven_ad",
+              "name": "Acción Democrática",
+              "short": "AD",
+              "founded": 1941,
+              "ideology": "Social-democracia / Centro-izquierda",
+              "ranges": {
+                "property_rights":       { "min": 30, "max": 50 },
+                "government_integrity":  { "min": 30, "max": 50 },
+                "judicial_effectiveness":{ "min": 30, "max": 50 },
+                "tax_burden":            { "min": 35, "max": 55 },
+                "government_spending":   { "min": 20, "max": 40 },
+                "fiscal_health":         { "min": 20, "max": 45 },
+                "business_freedom":      { "min": 35, "max": 55 },
+                "labor_freedom":         { "min": 30, "max": 50 },
+                "monetary_freedom":      { "min": 35, "max": 55 },
+                "trade_freedom":         { "min": 35, "max": 55 },
+                "investment_freedom":    { "min": 30, "max": 50 },
+                "financial_freedom":     { "min": 30, "max": 50 }
+              }
+            },
+            {
+              "id": "ven_copei",
+              "name": "COPEI - Partido Social Cristiano",
+              "short": "COPEI",
+              "founded": 1946,
+              "ideology": "Democracia cristiana / Centro",
+              "ranges": {
+                "property_rights":       { "min": 40, "max": 60 },
+                "government_integrity":  { "min": 35, "max": 55 },
+                "judicial_effectiveness":{ "min": 35, "max": 55 },
+                "tax_burden":            { "min": 40, "max": 60 },
+                "government_spending":   { "min": 30, "max": 50 },
+                "fiscal_health":         { "min": 30, "max": 50 },
+                "business_freedom":      { "min": 42, "max": 62 },
+                "labor_freedom":         { "min": 35, "max": 55 },
+                "monetary_freedom":      { "min": 40, "max": 60 },
+                "trade_freedom":         { "min": 40, "max": 60 },
+                "investment_freedom":    { "min": 38, "max": 58 },
+                "financial_freedom":     { "min": 35, "max": 55 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "carlos_andres_perez",
+              "name": "Carlos Andrés Pérez",
+              "party_id": "ven_ad",
+              "values": {
+                "property_rights": 38,
+                "government_integrity": 35,
+                "judicial_effectiveness": 35,
+                "tax_burden": 42,
+                "government_spending": 25,
+                "fiscal_health": 30,
+                "business_freedom": 42,
+                "labor_freedom": 35,
+                "monetary_freedom": 40,
+                "trade_freedom": 42,
+                "investment_freedom": 38,
+                "financial_freedom": 35
+              }
+            },
+            {
+              "id": "eduardo_fernandez",
+              "name": "Eduardo Fernández",
+              "party_id": "ven_copei",
+              "values": {
+                "property_rights": 52,
+                "government_integrity": 48,
+                "judicial_effectiveness": 48,
+                "tax_burden": 52,
+                "government_spending": 42,
+                "fiscal_health": 42,
+                "business_freedom": 54,
+                "labor_freedom": 48,
+                "monetary_freedom": 52,
+                "trade_freedom": 52,
+                "investment_freedom": 50,
+                "financial_freedom": 48
+              }
+            }
+          ]
+        },
+        {
+          "id": "peru",
+          "name": "Perú",
+          "capital": "Lima",
+          "region": "América del Sur",
+          "leader_id": "alan_garcia",
+          "parties": [
+            {
+              "id": "per_apra",
+              "name": "Partido Aprista Peruano (APRA)",
+              "short": "APRA",
+              "founded": 1924,
+              "ideology": "Populismo / Centro-izquierda",
+              "ranges": {
+                "property_rights":       { "min": 25, "max": 45 },
+                "government_integrity":  { "min": 20, "max": 40 },
+                "judicial_effectiveness":{ "min": 20, "max": 40 },
+                "tax_burden":            { "min": 25, "max": 45 },
+                "government_spending":   { "min": 15, "max": 35 },
+                "fiscal_health":         { "min": 10, "max": 30 },
+                "business_freedom":      { "min": 25, "max": 45 },
+                "labor_freedom":         { "min": 20, "max": 40 },
+                "monetary_freedom":      { "min": 15, "max": 35 },
+                "trade_freedom":         { "min": 25, "max": 45 },
+                "investment_freedom":    { "min": 20, "max": 40 },
+                "financial_freedom":     { "min": 20, "max": 38 }
+              }
+            },
+            {
+              "id": "per_fredemo",
+              "name": "Frente Democrático (FREDEMO)",
+              "short": "FREDEMO",
+              "founded": 1988,
+              "ideology": "Liberalismo / Centro-derecha",
+              "ranges": {
+                "property_rights":       { "min": 55, "max": 75 },
+                "government_integrity":  { "min": 40, "max": 60 },
+                "judicial_effectiveness":{ "min": 40, "max": 60 },
+                "tax_burden":            { "min": 55, "max": 75 },
+                "government_spending":   { "min": 50, "max": 70 },
+                "fiscal_health":         { "min": 45, "max": 65 },
+                "business_freedom":      { "min": 60, "max": 80 },
+                "labor_freedom":         { "min": 55, "max": 75 },
+                "monetary_freedom":      { "min": 55, "max": 75 },
+                "trade_freedom":         { "min": 58, "max": 78 },
+                "investment_freedom":    { "min": 55, "max": 75 },
+                "financial_freedom":     { "min": 50, "max": 70 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "alan_garcia",
+              "name": "Alan García",
+              "party_id": "per_apra",
+              "values": {
+                "property_rights": 30,
+                "government_integrity": 25,
+                "judicial_effectiveness": 25,
+                "tax_burden": 30,
+                "government_spending": 18,
+                "fiscal_health": 12,
+                "business_freedom": 28,
+                "labor_freedom": 25,
+                "monetary_freedom": 18,
+                "trade_freedom": 28,
+                "investment_freedom": 22,
+                "financial_freedom": 22
+              }
+            },
+            {
+              "id": "mario_vargas_llosa",
+              "name": "Mario Vargas Llosa",
+              "party_id": "per_fredemo",
+              "values": {
+                "property_rights": 70,
+                "government_integrity": 55,
+                "judicial_effectiveness": 55,
+                "tax_burden": 70,
+                "government_spending": 65,
+                "fiscal_health": 60,
+                "business_freedom": 75,
+                "labor_freedom": 70,
+                "monetary_freedom": 68,
+                "trade_freedom": 72,
+                "investment_freedom": 68,
+                "financial_freedom": 65
+              }
+            }
+          ]
+        },
+        {
+          "id": "uruguay",
+          "name": "Uruguay",
+          "capital": "Montevideo",
+          "region": "América del Sur",
+          "leader_id": "julio_sanguinetti",
+          "parties": [
+            {
+              "id": "ury_colorado",
+              "name": "Partido Colorado",
+              "short": "Colorado",
+              "founded": 1836,
+              "ideology": "Liberalismo / Centro",
+              "ranges": {
+                "property_rights":       { "min": 50, "max": 70 },
+                "government_integrity":  { "min": 45, "max": 65 },
+                "judicial_effectiveness":{ "min": 50, "max": 70 },
+                "tax_burden":            { "min": 40, "max": 60 },
+                "government_spending":   { "min": 30, "max": 50 },
+                "fiscal_health":         { "min": 35, "max": 55 },
+                "business_freedom":      { "min": 50, "max": 70 },
+                "labor_freedom":         { "min": 40, "max": 60 },
+                "monetary_freedom":      { "min": 45, "max": 65 },
+                "trade_freedom":         { "min": 50, "max": 70 },
+                "investment_freedom":    { "min": 48, "max": 68 },
+                "financial_freedom":     { "min": 45, "max": 65 }
+              }
+            },
+            {
+              "id": "ury_blanco",
+              "name": "Partido Nacional (Blancos)",
+              "short": "Blancos",
+              "founded": 1836,
+              "ideology": "Conservadurismo liberal / Centro-derecha",
+              "ranges": {
+                "property_rights":       { "min": 55, "max": 75 },
+                "government_integrity":  { "min": 48, "max": 68 },
+                "judicial_effectiveness":{ "min": 52, "max": 72 },
+                "tax_burden":            { "min": 48, "max": 68 },
+                "government_spending":   { "min": 42, "max": 62 },
+                "fiscal_health":         { "min": 42, "max": 62 },
+                "business_freedom":      { "min": 55, "max": 75 },
+                "labor_freedom":         { "min": 48, "max": 68 },
+                "monetary_freedom":      { "min": 50, "max": 70 },
+                "trade_freedom":         { "min": 55, "max": 75 },
+                "investment_freedom":    { "min": 52, "max": 72 },
+                "financial_freedom":     { "min": 50, "max": 70 }
+              }
+            },
+            {
+              "id": "ury_frenteamplio",
+              "name": "Frente Amplio",
+              "short": "FA",
+              "founded": 1971,
+              "ideology": "Izquierda / Social-democracia",
+              "ranges": {
+                "property_rights":       { "min": 30, "max": 50 },
+                "government_integrity":  { "min": 55, "max": 75 },
+                "judicial_effectiveness":{ "min": 55, "max": 75 },
+                "tax_burden":            { "min": 25, "max": 45 },
+                "government_spending":   { "min": 15, "max": 35 },
+                "fiscal_health":         { "min": 25, "max": 45 },
+                "business_freedom":      { "min": 35, "max": 55 },
+                "labor_freedom":         { "min": 25, "max": 45 },
+                "monetary_freedom":      { "min": 40, "max": 60 },
+                "trade_freedom":         { "min": 40, "max": 60 },
+                "investment_freedom":    { "min": 30, "max": 50 },
+                "financial_freedom":     { "min": 30, "max": 50 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "julio_sanguinetti",
+              "name": "Julio María Sanguinetti",
+              "party_id": "ury_colorado",
+              "values": {
+                "property_rights": 62,
+                "government_integrity": 58,
+                "judicial_effectiveness": 62,
+                "tax_burden": 52,
+                "government_spending": 42,
+                "fiscal_health": 46,
+                "business_freedom": 62,
+                "labor_freedom": 50,
+                "monetary_freedom": 55,
+                "trade_freedom": 62,
+                "investment_freedom": 58,
+                "financial_freedom": 55
+              }
+            },
+            {
+              "id": "luis_lacalle",
+              "name": "Luis Alberto Lacalle",
+              "party_id": "ury_blanco",
+              "values": {
+                "property_rights": 68,
+                "government_integrity": 60,
+                "judicial_effectiveness": 65,
+                "tax_burden": 60,
+                "government_spending": 55,
+                "fiscal_health": 55,
+                "business_freedom": 68,
+                "labor_freedom": 60,
+                "monetary_freedom": 62,
+                "trade_freedom": 68,
+                "investment_freedom": 65,
+                "financial_freedom": 62
+              }
+            },
+            {
+              "id": "liber_seregni",
+              "name": "Líber Seregni",
+              "party_id": "ury_frenteamplio",
+              "values": {
+                "property_rights": 38,
+                "government_integrity": 68,
+                "judicial_effectiveness": 65,
+                "tax_burden": 32,
+                "government_spending": 22,
+                "fiscal_health": 32,
+                "business_freedom": 42,
+                "labor_freedom": 32,
+                "monetary_freedom": 48,
+                "trade_freedom": 48,
+                "investment_freedom": 38,
+                "financial_freedom": 38
+              }
+            }
+          ]
+        },
+        {
+          "id": "bolivia",
+          "name": "Bolivia",
+          "capital": "Sucre / La Paz",
+          "region": "América del Sur",
+          "leader_id": "jaime_paz_zamora",
+          "parties": [
+            {
+              "id": "bol_mnr",
+              "name": "Movimiento Nacionalista Revolucionario",
+              "short": "MNR",
+              "founded": 1941,
+              "ideology": "Nacionalismo / Centro",
+              "ranges": {
+                "property_rights":       { "min": 30, "max": 50 },
+                "government_integrity":  { "min": 25, "max": 45 },
+                "judicial_effectiveness":{ "min": 25, "max": 45 },
+                "tax_burden":            { "min": 35, "max": 55 },
+                "government_spending":   { "min": 25, "max": 45 },
+                "fiscal_health":         { "min": 20, "max": 40 },
+                "business_freedom":      { "min": 35, "max": 55 },
+                "labor_freedom":         { "min": 28, "max": 48 },
+                "monetary_freedom":      { "min": 30, "max": 50 },
+                "trade_freedom":         { "min": 32, "max": 52 },
+                "investment_freedom":    { "min": 28, "max": 48 },
+                "financial_freedom":     { "min": 25, "max": 45 }
+              }
+            },
+            {
+              "id": "bol_adn",
+              "name": "Acción Democrática Nacionalista",
+              "short": "ADN",
+              "founded": 1979,
+              "ideology": "Conservadurismo / Centro-derecha",
+              "ranges": {
+                "property_rights":       { "min": 42, "max": 62 },
+                "government_integrity":  { "min": 30, "max": 50 },
+                "judicial_effectiveness":{ "min": 30, "max": 50 },
+                "tax_burden":            { "min": 45, "max": 65 },
+                "government_spending":   { "min": 40, "max": 60 },
+                "fiscal_health":         { "min": 35, "max": 55 },
+                "business_freedom":      { "min": 45, "max": 65 },
+                "labor_freedom":         { "min": 40, "max": 60 },
+                "monetary_freedom":      { "min": 40, "max": 60 },
+                "trade_freedom":         { "min": 42, "max": 62 },
+                "investment_freedom":    { "min": 38, "max": 58 },
+                "financial_freedom":     { "min": 35, "max": 55 }
+              }
+            },
+            {
+              "id": "bol_mir",
+              "name": "Movimiento de la Izquierda Revolucionaria",
+              "short": "MIR",
+              "founded": 1971,
+              "ideology": "Social-democracia / Centro-izquierda",
+              "ranges": {
+                "property_rights":       { "min": 22, "max": 42 },
+                "government_integrity":  { "min": 35, "max": 55 },
+                "judicial_effectiveness":{ "min": 30, "max": 50 },
+                "tax_burden":            { "min": 25, "max": 45 },
+                "government_spending":   { "min": 15, "max": 35 },
+                "fiscal_health":         { "min": 15, "max": 35 },
+                "business_freedom":      { "min": 28, "max": 48 },
+                "labor_freedom":         { "min": 22, "max": 42 },
+                "monetary_freedom":      { "min": 28, "max": 48 },
+                "trade_freedom":         { "min": 28, "max": 48 },
+                "investment_freedom":    { "min": 22, "max": 42 },
+                "financial_freedom":     { "min": 20, "max": 40 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "jaime_paz_zamora",
+              "name": "Jaime Paz Zamora",
+              "party_id": "bol_mir",
+              "values": {
+                "property_rights": 32,
+                "government_integrity": 45,
+                "judicial_effectiveness": 38,
+                "tax_burden": 35,
+                "government_spending": 25,
+                "fiscal_health": 22,
+                "business_freedom": 38,
+                "labor_freedom": 30,
+                "monetary_freedom": 38,
+                "trade_freedom": 36,
+                "investment_freedom": 30,
+                "financial_freedom": 28
+              }
+            },
+            {
+              "id": "hugo_banzer",
+              "name": "Hugo Banzer",
+              "party_id": "bol_adn",
+              "values": {
+                "property_rights": 52,
+                "government_integrity": 35,
+                "judicial_effectiveness": 38,
+                "tax_burden": 55,
+                "government_spending": 50,
+                "fiscal_health": 45,
+                "business_freedom": 55,
+                "labor_freedom": 52,
+                "monetary_freedom": 50,
+                "trade_freedom": 52,
+                "investment_freedom": 48,
+                "financial_freedom": 45
+              }
+            }
+          ]
+        },
+        {
+          "id": "paraguay",
+          "name": "Paraguay",
+          "capital": "Asunción",
+          "region": "América del Sur",
+          "leader_id": "andres_rodriguez",
+          "parties": [
+            {
+              "id": "pry_colorado",
+              "name": "Asociación Nacional Republicana (Partido Colorado)",
+              "short": "Colorado",
+              "founded": 1887,
+              "ideology": "Autoritarismo / Nacionalismo",
+              "ranges": {
+                "property_rights":       { "min": 25, "max": 45 },
+                "government_integrity":  { "min": 10, "max": 30 },
+                "judicial_effectiveness":{ "min": 10, "max": 30 },
+                "tax_burden":            { "min": 40, "max": 60 },
+                "government_spending":   { "min": 30, "max": 55 },
+                "fiscal_health":         { "min": 25, "max": 50 },
+                "business_freedom":      { "min": 30, "max": 55 },
+                "labor_freedom":         { "min": 25, "max": 48 },
+                "monetary_freedom":      { "min": 35, "max": 58 },
+                "trade_freedom":         { "min": 40, "max": 65 },
+                "investment_freedom":    { "min": 30, "max": 55 },
+                "financial_freedom":     { "min": 28, "max": 52 }
+              }
+            },
+            {
+              "id": "pry_plra",
+              "name": "Partido Liberal Radical Auténtico",
+              "short": "PLRA",
+              "founded": 1887,
+              "ideology": "Liberalismo / Centro",
+              "ranges": {
+                "property_rights":       { "min": 40, "max": 60 },
+                "government_integrity":  { "min": 40, "max": 60 },
+                "judicial_effectiveness":{ "min": 40, "max": 60 },
+                "tax_burden":            { "min": 42, "max": 62 },
+                "government_spending":   { "min": 35, "max": 55 },
+                "fiscal_health":         { "min": 35, "max": 55 },
+                "business_freedom":      { "min": 42, "max": 62 },
+                "labor_freedom":         { "min": 38, "max": 58 },
+                "monetary_freedom":      { "min": 40, "max": 60 },
+                "trade_freedom":         { "min": 45, "max": 65 },
+                "investment_freedom":    { "min": 40, "max": 60 },
+                "financial_freedom":     { "min": 38, "max": 58 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "andres_rodriguez",
+              "name": "Andrés Rodríguez",
+              "party_id": "pry_colorado",
+              "values": {
+                "property_rights": 32,
+                "government_integrity": 15,
+                "judicial_effectiveness": 15,
+                "tax_burden": 50,
+                "government_spending": 42,
+                "fiscal_health": 38,
+                "business_freedom": 42,
+                "labor_freedom": 35,
+                "monetary_freedom": 48,
+                "trade_freedom": 55,
+                "investment_freedom": 42,
+                "financial_freedom": 40
+              }
+            },
+            {
+              "id": "domingo_laino",
+              "name": "Domingo Laíno",
+              "party_id": "pry_plra",
+              "values": {
+                "property_rights": 52,
+                "government_integrity": 52,
+                "judicial_effectiveness": 52,
+                "tax_burden": 52,
+                "government_spending": 45,
+                "fiscal_health": 45,
+                "business_freedom": 52,
+                "labor_freedom": 48,
+                "monetary_freedom": 50,
+                "trade_freedom": 55,
+                "investment_freedom": 50,
+                "financial_freedom": 48
+              }
+            }
+          ]
+        },
+        {
+          "id": "ecuador",
+          "name": "Ecuador",
+          "capital": "Quito",
+          "region": "América del Sur",
+          "leader_id": "rodrigo_borja",
+          "parties": [
+            {
+              "id": "ecu_id",
+              "name": "Izquierda Democrática",
+              "short": "ID",
+              "founded": 1970,
+              "ideology": "Social-democracia / Centro-izquierda",
+              "ranges": {
+                "property_rights":       { "min": 28, "max": 48 },
+                "government_integrity":  { "min": 38, "max": 58 },
+                "judicial_effectiveness":{ "min": 32, "max": 52 },
+                "tax_burden":            { "min": 28, "max": 48 },
+                "government_spending":   { "min": 20, "max": 40 },
+                "fiscal_health":         { "min": 20, "max": 40 },
+                "business_freedom":      { "min": 32, "max": 52 },
+                "labor_freedom":         { "min": 25, "max": 45 },
+                "monetary_freedom":      { "min": 35, "max": 55 },
+                "trade_freedom":         { "min": 32, "max": 52 },
+                "investment_freedom":    { "min": 28, "max": 48 },
+                "financial_freedom":     { "min": 25, "max": 45 }
+              }
+            },
+            {
+              "id": "ecu_psc",
+              "name": "Partido Social Cristiano",
+              "short": "PSC",
+              "founded": 1951,
+              "ideology": "Conservadurismo / Centro-derecha",
+              "ranges": {
+                "property_rights":       { "min": 45, "max": 65 },
+                "government_integrity":  { "min": 30, "max": 50 },
+                "judicial_effectiveness":{ "min": 35, "max": 55 },
+                "tax_burden":            { "min": 48, "max": 68 },
+                "government_spending":   { "min": 42, "max": 62 },
+                "fiscal_health":         { "min": 38, "max": 58 },
+                "business_freedom":      { "min": 50, "max": 70 },
+                "labor_freedom":         { "min": 45, "max": 65 },
+                "monetary_freedom":      { "min": 45, "max": 65 },
+                "trade_freedom":         { "min": 48, "max": 68 },
+                "investment_freedom":    { "min": 45, "max": 65 },
+                "financial_freedom":     { "min": 42, "max": 62 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "rodrigo_borja",
+              "name": "Rodrigo Borja",
+              "party_id": "ecu_id",
+              "values": {
+                "property_rights": 36,
+                "government_integrity": 48,
+                "judicial_effectiveness": 40,
+                "tax_burden": 36,
+                "government_spending": 28,
+                "fiscal_health": 28,
+                "business_freedom": 40,
+                "labor_freedom": 32,
+                "monetary_freedom": 44,
+                "trade_freedom": 40,
+                "investment_freedom": 35,
+                "financial_freedom": 32
+              }
+            },
+            {
+              "id": "sixto_duran",
+              "name": "Sixto Durán Ballén",
+              "party_id": "ecu_psc",
+              "values": {
+                "property_rights": 58,
+                "government_integrity": 40,
+                "judicial_effectiveness": 46,
+                "tax_burden": 60,
+                "government_spending": 54,
+                "fiscal_health": 50,
+                "business_freedom": 62,
+                "labor_freedom": 56,
+                "monetary_freedom": 56,
+                "trade_freedom": 60,
+                "investment_freedom": 56,
+                "financial_freedom": 52
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "2024": {
+      "_note": "Valores basados en el Index of Economic Freedom 2024 (Heritage Foundation). Los valores de partido son rangos estimados alrededor de los valores del líder actual.",
+      "countries": [
+        {
+          "id": "argentina",
+          "name": "Argentina",
+          "capital": "Buenos Aires",
+          "region": "América del Sur",
+          "leader_id": "javier_milei",
+          "parties": [
+            {
+              "id": "arg_lalibertadavanza",
+              "name": "La Libertad Avanza",
+              "short": "LLA",
+              "founded": 2021,
+              "ideology": "Libertarianismo / Derecha",
+              "ranges": {
+                "property_rights":       { "min": 65, "max": 85 },
+                "government_integrity":  { "min": 45, "max": 65 },
+                "judicial_effectiveness":{ "min": 45, "max": 65 },
+                "tax_burden":            { "min": 70, "max": 90 },
+                "government_spending":   { "min": 70, "max": 90 },
+                "fiscal_health":         { "min": 50, "max": 75 },
+                "business_freedom":      { "min": 65, "max": 85 },
+                "labor_freedom":         { "min": 65, "max": 85 },
+                "monetary_freedom":      { "min": 55, "max": 75 },
+                "trade_freedom":         { "min": 68, "max": 88 },
+                "investment_freedom":    { "min": 65, "max": 85 },
+                "financial_freedom":     { "min": 60, "max": 80 }
+              }
+            },
+            {
+              "id": "arg_up",
+              "name": "Unión por la Patria (Kirchnerismo)",
+              "short": "UP",
+              "founded": 2023,
+              "ideology": "Peronismo / Izquierda-populista",
+              "ranges": {
+                "property_rights":       { "min": 20, "max": 40 },
+                "government_integrity":  { "min": 15, "max": 35 },
+                "judicial_effectiveness":{ "min": 15, "max": 35 },
+                "tax_burden":            { "min": 20, "max": 40 },
+                "government_spending":   { "min": 10, "max": 30 },
+                "fiscal_health":         { "min": 5,  "max": 25 },
+                "business_freedom":      { "min": 20, "max": 40 },
+                "labor_freedom":         { "min": 20, "max": 38 },
+                "monetary_freedom":      { "min": 15, "max": 35 },
+                "trade_freedom":         { "min": 22, "max": 42 },
+                "investment_freedom":    { "min": 15, "max": 35 },
+                "financial_freedom":     { "min": 15, "max": 35 }
+              }
+            },
+            {
+              "id": "arg_pro",
+              "name": "PRO / Juntos por el Cambio",
+              "short": "PRO",
+              "founded": 2005,
+              "ideology": "Centro-derecha / Liberal-conservador",
+              "ranges": {
+                "property_rights":       { "min": 45, "max": 65 },
+                "government_integrity":  { "min": 45, "max": 65 },
+                "judicial_effectiveness":{ "min": 45, "max": 65 },
+                "tax_burden":            { "min": 48, "max": 68 },
+                "government_spending":   { "min": 45, "max": 65 },
+                "fiscal_health":         { "min": 38, "max": 58 },
+                "business_freedom":      { "min": 50, "max": 70 },
+                "labor_freedom":         { "min": 48, "max": 68 },
+                "monetary_freedom":      { "min": 42, "max": 62 },
+                "trade_freedom":         { "min": 50, "max": 70 },
+                "investment_freedom":    { "min": 48, "max": 68 },
+                "financial_freedom":     { "min": 45, "max": 65 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "javier_milei",
+              "name": "Javier Milei",
+              "party_id": "arg_lalibertadavanza",
+              "values": {
+                "property_rights": 78,
+                "government_integrity": 55,
+                "judicial_effectiveness": 52,
+                "tax_burden": 82,
+                "government_spending": 82,
+                "fiscal_health": 62,
+                "business_freedom": 78,
+                "labor_freedom": 75,
+                "monetary_freedom": 62,
+                "trade_freedom": 80,
+                "investment_freedom": 75,
+                "financial_freedom": 70
+              }
+            },
+            {
+              "id": "cristina_kirchner",
+              "name": "Cristina Fernández de Kirchner",
+              "party_id": "arg_up",
+              "values": {
+                "property_rights": 25,
+                "government_integrity": 20,
+                "judicial_effectiveness": 18,
+                "tax_burden": 25,
+                "government_spending": 15,
+                "fiscal_health": 8,
+                "business_freedom": 25,
+                "labor_freedom": 22,
+                "monetary_freedom": 18,
+                "trade_freedom": 25,
+                "investment_freedom": 18,
+                "financial_freedom": 18
+              }
+            }
+          ]
+        },
+        {
+          "id": "brazil",
+          "name": "Brasil",
+          "capital": "Brasilia",
+          "region": "América del Sur",
+          "leader_id": "lula_2024",
+          "parties": [
+            {
+              "id": "bra_pt_2024",
+              "name": "Partido dos Trabalhadores",
+              "short": "PT",
+              "founded": 1980,
+              "ideology": "Socialismo democrático / Centro-izquierda",
+              "ranges": {
+                "property_rights":       { "min": 30, "max": 50 },
+                "government_integrity":  { "min": 35, "max": 55 },
+                "judicial_effectiveness":{ "min": 35, "max": 55 },
+                "tax_burden":            { "min": 20, "max": 40 },
+                "government_spending":   { "min": 15, "max": 35 },
+                "fiscal_health":         { "min": 15, "max": 35 },
+                "business_freedom":      { "min": 35, "max": 55 },
+                "labor_freedom":         { "min": 25, "max": 45 },
+                "monetary_freedom":      { "min": 40, "max": 60 },
+                "trade_freedom":         { "min": 35, "max": 55 },
+                "investment_freedom":    { "min": 30, "max": 50 },
+                "financial_freedom":     { "min": 30, "max": 50 }
+              }
+            },
+            {
+              "id": "bra_pl",
+              "name": "Partido Liberal (Bolsonarismo)",
+              "short": "PL",
+              "founded": 1985,
+              "ideology": "Conservadurismo nacional / Derecha",
+              "ranges": {
+                "property_rights":       { "min": 48, "max": 68 },
+                "government_integrity":  { "min": 28, "max": 48 },
+                "judicial_effectiveness":{ "min": 30, "max": 50 },
+                "tax_burden":            { "min": 50, "max": 70 },
+                "government_spending":   { "min": 45, "max": 65 },
+                "fiscal_health":         { "min": 35, "max": 55 },
+                "business_freedom":      { "min": 50, "max": 70 },
+                "labor_freedom":         { "min": 50, "max": 70 },
+                "monetary_freedom":      { "min": 45, "max": 65 },
+                "trade_freedom":         { "min": 48, "max": 68 },
+                "investment_freedom":    { "min": 45, "max": 65 },
+                "financial_freedom":     { "min": 42, "max": 62 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "lula_2024",
+              "name": "Luiz Inácio Lula da Silva",
+              "party_id": "bra_pt_2024",
+              "values": {
+                "property_rights": 38,
+                "government_integrity": 42,
+                "judicial_effectiveness": 44,
+                "tax_burden": 28,
+                "government_spending": 22,
+                "fiscal_health": 22,
+                "business_freedom": 44,
+                "labor_freedom": 32,
+                "monetary_freedom": 50,
+                "trade_freedom": 44,
+                "investment_freedom": 38,
+                "financial_freedom": 38
+              }
+            },
+            {
+              "id": "jair_bolsonaro",
+              "name": "Jair Bolsonaro",
+              "party_id": "bra_pl",
+              "values": {
+                "property_rights": 58,
+                "government_integrity": 35,
+                "judicial_effectiveness": 38,
+                "tax_burden": 60,
+                "government_spending": 55,
+                "fiscal_health": 44,
+                "business_freedom": 60,
+                "labor_freedom": 60,
+                "monetary_freedom": 55,
+                "trade_freedom": 58,
+                "investment_freedom": 55,
+                "financial_freedom": 52
+              }
+            }
+          ]
+        },
+        {
+          "id": "chile",
+          "name": "Chile",
+          "capital": "Santiago",
+          "region": "América del Sur",
+          "leader_id": "gabriel_boric",
+          "parties": [
+            {
+              "id": "chl_apruebo",
+              "name": "Apruebo Dignidad / Frente Amplio",
+              "short": "FA-Chile",
+              "founded": 2017,
+              "ideology": "Izquierda / Progresismo",
+              "ranges": {
+                "property_rights":       { "min": 45, "max": 65 },
+                "government_integrity":  { "min": 55, "max": 75 },
+                "judicial_effectiveness":{ "min": 55, "max": 75 },
+                "tax_burden":            { "min": 30, "max": 50 },
+                "government_spending":   { "min": 20, "max": 40 },
+                "fiscal_health":         { "min": 30, "max": 50 },
+                "business_freedom":      { "min": 50, "max": 70 },
+                "labor_freedom":         { "min": 35, "max": 55 },
+                "monetary_freedom":      { "min": 55, "max": 75 },
+                "trade_freedom":         { "min": 60, "max": 80 },
+                "investment_freedom":    { "min": 50, "max": 70 },
+                "financial_freedom":     { "min": 50, "max": 70 }
+              }
+            },
+            {
+              "id": "chl_chile_vamos",
+              "name": "Chile Vamos (RN + UDI)",
+              "short": "ChV",
+              "founded": 2015,
+              "ideology": "Centro-derecha / Liberal-conservador",
+              "ranges": {
+                "property_rights":       { "min": 65, "max": 85 },
+                "government_integrity":  { "min": 50, "max": 70 },
+                "judicial_effectiveness":{ "min": 55, "max": 75 },
+                "tax_burden":            { "min": 62, "max": 82 },
+                "government_spending":   { "min": 55, "max": 75 },
+                "fiscal_health":         { "min": 55, "max": 75 },
+                "business_freedom":      { "min": 68, "max": 88 },
+                "labor_freedom":         { "min": 60, "max": 80 },
+                "monetary_freedom":      { "min": 62, "max": 82 },
+                "trade_freedom":         { "min": 68, "max": 88 },
+                "investment_freedom":    { "min": 65, "max": 85 },
+                "financial_freedom":     { "min": 62, "max": 82 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "gabriel_boric",
+              "name": "Gabriel Boric",
+              "party_id": "chl_apruebo",
+              "values": {
+                "property_rights": 55,
+                "government_integrity": 65,
+                "judicial_effectiveness": 65,
+                "tax_burden": 40,
+                "government_spending": 30,
+                "fiscal_health": 40,
+                "business_freedom": 60,
+                "labor_freedom": 44,
+                "monetary_freedom": 65,
+                "trade_freedom": 70,
+                "investment_freedom": 60,
+                "financial_freedom": 60
+              }
+            },
+            {
+              "id": "jose_antonio_kast",
+              "name": "José Antonio Kast",
+              "party_id": "chl_chile_vamos",
+              "values": {
+                "property_rights": 80,
+                "government_integrity": 62,
+                "judicial_effectiveness": 68,
+                "tax_burden": 78,
+                "government_spending": 72,
+                "fiscal_health": 68,
+                "business_freedom": 82,
+                "labor_freedom": 75,
+                "monetary_freedom": 75,
+                "trade_freedom": 82,
+                "investment_freedom": 78,
+                "financial_freedom": 75
+              }
+            }
+          ]
+        },
+        {
+          "id": "colombia",
+          "name": "Colombia",
+          "capital": "Bogotá",
+          "region": "América del Sur",
+          "leader_id": "gustavo_petro",
+          "parties": [
+            {
+              "id": "col_pacto",
+              "name": "Pacto Histórico",
+              "short": "PH",
+              "founded": 2021,
+              "ideology": "Izquierda / Progresismo",
+              "ranges": {
+                "property_rights":       { "min": 25, "max": 45 },
+                "government_integrity":  { "min": 40, "max": 60 },
+                "judicial_effectiveness":{ "min": 35, "max": 55 },
+                "tax_burden":            { "min": 20, "max": 40 },
+                "government_spending":   { "min": 15, "max": 35 },
+                "fiscal_health":         { "min": 15, "max": 35 },
+                "business_freedom":      { "min": 30, "max": 50 },
+                "labor_freedom":         { "min": 25, "max": 45 },
+                "monetary_freedom":      { "min": 40, "max": 60 },
+                "trade_freedom":         { "min": 38, "max": 58 },
+                "investment_freedom":    { "min": 25, "max": 45 },
+                "financial_freedom":     { "min": 25, "max": 45 }
+              }
+            },
+            {
+              "id": "col_centro_democratico",
+              "name": "Centro Democrático (Uribismo)",
+              "short": "CD",
+              "founded": 2013,
+              "ideology": "Centro-derecha / Seguridad democrática",
+              "ranges": {
+                "property_rights":       { "min": 48, "max": 68 },
+                "government_integrity":  { "min": 35, "max": 55 },
+                "judicial_effectiveness":{ "min": 40, "max": 60 },
+                "tax_burden":            { "min": 48, "max": 68 },
+                "government_spending":   { "min": 42, "max": 62 },
+                "fiscal_health":         { "min": 38, "max": 58 },
+                "business_freedom":      { "min": 52, "max": 72 },
+                "labor_freedom":         { "min": 48, "max": 68 },
+                "monetary_freedom":      { "min": 48, "max": 68 },
+                "trade_freedom":         { "min": 52, "max": 72 },
+                "investment_freedom":    { "min": 48, "max": 68 },
+                "financial_freedom":     { "min": 45, "max": 65 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "gustavo_petro",
+              "name": "Gustavo Petro",
+              "party_id": "col_pacto",
+              "values": {
+                "property_rights": 32,
+                "government_integrity": 48,
+                "judicial_effectiveness": 42,
+                "tax_burden": 28,
+                "government_spending": 22,
+                "fiscal_health": 20,
+                "business_freedom": 38,
+                "labor_freedom": 30,
+                "monetary_freedom": 48,
+                "trade_freedom": 44,
+                "investment_freedom": 30,
+                "financial_freedom": 30
+              }
+            },
+            {
+              "id": "federico_gutierrez",
+              "name": "Federico Gutiérrez",
+              "party_id": "col_centro_democratico",
+              "values": {
+                "property_rights": 58,
+                "government_integrity": 44,
+                "judicial_effectiveness": 50,
+                "tax_burden": 58,
+                "government_spending": 52,
+                "fiscal_health": 48,
+                "business_freedom": 62,
+                "labor_freedom": 58,
+                "monetary_freedom": 58,
+                "trade_freedom": 62,
+                "investment_freedom": 58,
+                "financial_freedom": 55
+              }
+            }
+          ]
+        },
+        {
+          "id": "venezuela",
+          "name": "Venezuela",
+          "capital": "Caracas",
+          "region": "América del Sur",
+          "leader_id": "nicolas_maduro",
+          "parties": [
+            {
+              "id": "ven_psuv",
+              "name": "Partido Socialista Unido de Venezuela",
+              "short": "PSUV",
+              "founded": 2007,
+              "ideology": "Socialismo del siglo XXI / Autoritarismo",
+              "ranges": {
+                "property_rights":       { "min": 5,  "max": 20 },
+                "government_integrity":  { "min": 5,  "max": 20 },
+                "judicial_effectiveness":{ "min": 5,  "max": 18 },
+                "tax_burden":            { "min": 25, "max": 50 },
+                "government_spending":   { "min": 10, "max": 30 },
+                "fiscal_health":         { "min": 5,  "max": 20 },
+                "business_freedom":      { "min": 10, "max": 28 },
+                "labor_freedom":         { "min": 10, "max": 28 },
+                "monetary_freedom":      { "min": 5,  "max": 22 },
+                "trade_freedom":         { "min": 10, "max": 28 },
+                "investment_freedom":    { "min": 5,  "max": 20 },
+                "financial_freedom":     { "min": 5,  "max": 18 }
+              }
+            },
+            {
+              "id": "ven_mud",
+              "name": "Plataforma Unitaria Democrática",
+              "short": "PUD",
+              "founded": 2008,
+              "ideology": "Centro / Liberal-democracia",
+              "ranges": {
+                "property_rights":       { "min": 45, "max": 65 },
+                "government_integrity":  { "min": 45, "max": 65 },
+                "judicial_effectiveness":{ "min": 45, "max": 65 },
+                "tax_burden":            { "min": 42, "max": 62 },
+                "government_spending":   { "min": 35, "max": 55 },
+                "fiscal_health":         { "min": 35, "max": 55 },
+                "business_freedom":      { "min": 48, "max": 68 },
+                "labor_freedom":         { "min": 42, "max": 62 },
+                "monetary_freedom":      { "min": 45, "max": 65 },
+                "trade_freedom":         { "min": 45, "max": 65 },
+                "investment_freedom":    { "min": 42, "max": 62 },
+                "financial_freedom":     { "min": 40, "max": 60 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "nicolas_maduro",
+              "name": "Nicolás Maduro",
+              "party_id": "ven_psuv",
+              "values": {
+                "property_rights": 8,
+                "government_integrity": 8,
+                "judicial_effectiveness": 6,
+                "tax_burden": 35,
+                "government_spending": 15,
+                "fiscal_health": 8,
+                "business_freedom": 15,
+                "labor_freedom": 15,
+                "monetary_freedom": 8,
+                "trade_freedom": 15,
+                "investment_freedom": 8,
+                "financial_freedom": 8
+              }
+            },
+            {
+              "id": "edmundo_gonzalez",
+              "name": "Edmundo González Urrutia",
+              "party_id": "ven_mud",
+              "values": {
+                "property_rights": 55,
+                "government_integrity": 58,
+                "judicial_effectiveness": 56,
+                "tax_burden": 52,
+                "government_spending": 45,
+                "fiscal_health": 44,
+                "business_freedom": 58,
+                "labor_freedom": 52,
+                "monetary_freedom": 55,
+                "trade_freedom": 55,
+                "investment_freedom": 52,
+                "financial_freedom": 50
+              }
+            }
+          ]
+        },
+        {
+          "id": "peru",
+          "name": "Perú",
+          "capital": "Lima",
+          "region": "América del Sur",
+          "leader_id": "dina_boluarte",
+          "parties": [
+            {
+              "id": "per_fuerza_popular",
+              "name": "Fuerza Popular (Fujimorismo)",
+              "short": "FP",
+              "founded": 2010,
+              "ideology": "Centro-derecha / Populismo conservador",
+              "ranges": {
+                "property_rights":       { "min": 42, "max": 62 },
+                "government_integrity":  { "min": 20, "max": 40 },
+                "judicial_effectiveness":{ "min": 22, "max": 42 },
+                "tax_burden":            { "min": 48, "max": 68 },
+                "government_spending":   { "min": 42, "max": 62 },
+                "fiscal_health":         { "min": 38, "max": 58 },
+                "business_freedom":      { "min": 48, "max": 68 },
+                "labor_freedom":         { "min": 45, "max": 65 },
+                "monetary_freedom":      { "min": 48, "max": 68 },
+                "trade_freedom":         { "min": 52, "max": 72 },
+                "investment_freedom":    { "min": 48, "max": 68 },
+                "financial_freedom":     { "min": 45, "max": 65 }
+              }
+            },
+            {
+              "id": "per_peru_libre",
+              "name": "Perú Libre",
+              "short": "PL-PE",
+              "founded": 2008,
+              "ideology": "Marxismo-leninismo / Izquierda",
+              "ranges": {
+                "property_rights":       { "min": 15, "max": 35 },
+                "government_integrity":  { "min": 20, "max": 40 },
+                "judicial_effectiveness":{ "min": 15, "max": 35 },
+                "tax_burden":            { "min": 18, "max": 38 },
+                "government_spending":   { "min": 10, "max": 28 },
+                "fiscal_health":         { "min": 10, "max": 28 },
+                "business_freedom":      { "min": 18, "max": 38 },
+                "labor_freedom":         { "min": 15, "max": 35 },
+                "monetary_freedom":      { "min": 28, "max": 48 },
+                "trade_freedom":         { "min": 25, "max": 45 },
+                "investment_freedom":    { "min": 15, "max": 35 },
+                "financial_freedom":     { "min": 12, "max": 32 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "dina_boluarte",
+              "name": "Dina Boluarte",
+              "party_id": "per_fuerza_popular",
+              "values": {
+                "property_rights": 50,
+                "government_integrity": 28,
+                "judicial_effectiveness": 30,
+                "tax_burden": 56,
+                "government_spending": 50,
+                "fiscal_health": 46,
+                "business_freedom": 56,
+                "labor_freedom": 52,
+                "monetary_freedom": 56,
+                "trade_freedom": 60,
+                "investment_freedom": 56,
+                "financial_freedom": 52
+              }
+            },
+            {
+              "id": "pedro_castillo",
+              "name": "Pedro Castillo",
+              "party_id": "per_peru_libre",
+              "values": {
+                "property_rights": 22,
+                "government_integrity": 25,
+                "judicial_effectiveness": 20,
+                "tax_burden": 25,
+                "government_spending": 15,
+                "fiscal_health": 15,
+                "business_freedom": 25,
+                "labor_freedom": 20,
+                "monetary_freedom": 35,
+                "trade_freedom": 30,
+                "investment_freedom": 20,
+                "financial_freedom": 18
+              }
+            }
+          ]
+        },
+        {
+          "id": "uruguay",
+          "name": "Uruguay",
+          "capital": "Montevideo",
+          "region": "América del Sur",
+          "leader_id": "yamandu_orsi",
+          "parties": [
+            {
+              "id": "ury_fa_2024",
+              "name": "Frente Amplio",
+              "short": "FA",
+              "founded": 1971,
+              "ideology": "Centro-izquierda / Social-democracia",
+              "ranges": {
+                "property_rights":       { "min": 45, "max": 65 },
+                "government_integrity":  { "min": 60, "max": 80 },
+                "judicial_effectiveness":{ "min": 60, "max": 80 },
+                "tax_burden":            { "min": 30, "max": 50 },
+                "government_spending":   { "min": 22, "max": 42 },
+                "fiscal_health":         { "min": 35, "max": 55 },
+                "business_freedom":      { "min": 55, "max": 75 },
+                "labor_freedom":         { "min": 40, "max": 60 },
+                "monetary_freedom":      { "min": 58, "max": 78 },
+                "trade_freedom":         { "min": 60, "max": 80 },
+                "investment_freedom":    { "min": 55, "max": 75 },
+                "financial_freedom":     { "min": 52, "max": 72 }
+              }
+            },
+            {
+              "id": "ury_coalicion",
+              "name": "Coalición Republicana (Blancos + Colorado)",
+              "short": "CR",
+              "founded": 2019,
+              "ideology": "Centro-derecha / Liberal-conservador",
+              "ranges": {
+                "property_rights":       { "min": 58, "max": 78 },
+                "government_integrity":  { "min": 55, "max": 75 },
+                "judicial_effectiveness":{ "min": 58, "max": 78 },
+                "tax_burden":            { "min": 55, "max": 75 },
+                "government_spending":   { "min": 48, "max": 68 },
+                "fiscal_health":         { "min": 48, "max": 68 },
+                "business_freedom":      { "min": 62, "max": 82 },
+                "labor_freedom":         { "min": 55, "max": 75 },
+                "monetary_freedom":      { "min": 62, "max": 82 },
+                "trade_freedom":         { "min": 65, "max": 85 },
+                "investment_freedom":    { "min": 60, "max": 80 },
+                "financial_freedom":     { "min": 58, "max": 78 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "yamandu_orsi",
+              "name": "Yamandú Orsi",
+              "party_id": "ury_fa_2024",
+              "values": {
+                "property_rights": 55,
+                "government_integrity": 70,
+                "judicial_effectiveness": 70,
+                "tax_burden": 40,
+                "government_spending": 32,
+                "fiscal_health": 44,
+                "business_freedom": 65,
+                "labor_freedom": 50,
+                "monetary_freedom": 68,
+                "trade_freedom": 70,
+                "investment_freedom": 65,
+                "financial_freedom": 62
+              }
+            },
+            {
+              "id": "alvaro_delgado",
+              "name": "Álvaro Delgado",
+              "party_id": "ury_coalicion",
+              "values": {
+                "property_rights": 68,
+                "government_integrity": 65,
+                "judicial_effectiveness": 68,
+                "tax_burden": 65,
+                "government_spending": 58,
+                "fiscal_health": 58,
+                "business_freedom": 72,
+                "labor_freedom": 65,
+                "monetary_freedom": 72,
+                "trade_freedom": 75,
+                "investment_freedom": 70,
+                "financial_freedom": 68
+              }
+            }
+          ]
+        },
+        {
+          "id": "bolivia",
+          "name": "Bolivia",
+          "capital": "Sucre / La Paz",
+          "region": "América del Sur",
+          "leader_id": "luis_arce",
+          "parties": [
+            {
+              "id": "bol_mas",
+              "name": "Movimiento al Socialismo",
+              "short": "MAS",
+              "founded": 1999,
+              "ideology": "Socialismo indigenista / Izquierda",
+              "ranges": {
+                "property_rights":       { "min": 15, "max": 35 },
+                "government_integrity":  { "min": 18, "max": 38 },
+                "judicial_effectiveness":{ "min": 10, "max": 30 },
+                "tax_burden":            { "min": 20, "max": 40 },
+                "government_spending":   { "min": 10, "max": 28 },
+                "fiscal_health":         { "min": 8,  "max": 28 },
+                "business_freedom":      { "min": 22, "max": 42 },
+                "labor_freedom":         { "min": 18, "max": 38 },
+                "monetary_freedom":      { "min": 28, "max": 48 },
+                "trade_freedom":         { "min": 28, "max": 48 },
+                "investment_freedom":    { "min": 15, "max": 35 },
+                "financial_freedom":     { "min": 15, "max": 35 }
+              }
+            },
+            {
+              "id": "bol_cc",
+              "name": "Comunidad Ciudadana",
+              "short": "CC",
+              "founded": 2019,
+              "ideology": "Centro / Liberalismo progresista",
+              "ranges": {
+                "property_rights":       { "min": 42, "max": 62 },
+                "government_integrity":  { "min": 45, "max": 65 },
+                "judicial_effectiveness":{ "min": 42, "max": 62 },
+                "tax_burden":            { "min": 42, "max": 62 },
+                "government_spending":   { "min": 35, "max": 55 },
+                "fiscal_health":         { "min": 35, "max": 55 },
+                "business_freedom":      { "min": 45, "max": 65 },
+                "labor_freedom":         { "min": 40, "max": 60 },
+                "monetary_freedom":      { "min": 45, "max": 65 },
+                "trade_freedom":         { "min": 48, "max": 68 },
+                "investment_freedom":    { "min": 42, "max": 62 },
+                "financial_freedom":     { "min": 40, "max": 60 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "luis_arce",
+              "name": "Luis Arce",
+              "party_id": "bol_mas",
+              "values": {
+                "property_rights": 22,
+                "government_integrity": 25,
+                "judicial_effectiveness": 18,
+                "tax_burden": 28,
+                "government_spending": 16,
+                "fiscal_health": 14,
+                "business_freedom": 30,
+                "labor_freedom": 25,
+                "monetary_freedom": 36,
+                "trade_freedom": 35,
+                "investment_freedom": 22,
+                "financial_freedom": 22
+              }
+            },
+            {
+              "id": "carlos_mesa",
+              "name": "Carlos Mesa",
+              "party_id": "bol_cc",
+              "values": {
+                "property_rights": 52,
+                "government_integrity": 56,
+                "judicial_effectiveness": 52,
+                "tax_burden": 52,
+                "government_spending": 45,
+                "fiscal_health": 45,
+                "business_freedom": 55,
+                "labor_freedom": 50,
+                "monetary_freedom": 55,
+                "trade_freedom": 58,
+                "investment_freedom": 52,
+                "financial_freedom": 50
+              }
+            }
+          ]
+        },
+        {
+          "id": "paraguay",
+          "name": "Paraguay",
+          "capital": "Asunción",
+          "region": "América del Sur",
+          "leader_id": "santiago_pena",
+          "parties": [
+            {
+              "id": "pry_anr_2024",
+              "name": "Asociación Nacional Republicana (Partido Colorado)",
+              "short": "ANR",
+              "founded": 1887,
+              "ideology": "Conservadurismo / Centro-derecha",
+              "ranges": {
+                "property_rights":       { "min": 38, "max": 58 },
+                "government_integrity":  { "min": 20, "max": 40 },
+                "judicial_effectiveness":{ "min": 20, "max": 40 },
+                "tax_burden":            { "min": 55, "max": 75 },
+                "government_spending":   { "min": 50, "max": 70 },
+                "fiscal_health":         { "min": 45, "max": 65 },
+                "business_freedom":      { "min": 52, "max": 72 },
+                "labor_freedom":         { "min": 48, "max": 68 },
+                "monetary_freedom":      { "min": 52, "max": 72 },
+                "trade_freedom":         { "min": 60, "max": 80 },
+                "investment_freedom":    { "min": 52, "max": 72 },
+                "financial_freedom":     { "min": 48, "max": 68 }
+              }
+            },
+            {
+              "id": "pry_concertacion_2024",
+              "name": "Concertación Nacional",
+              "short": "CN",
+              "founded": 2012,
+              "ideology": "Centro / Liberal-progresista",
+              "ranges": {
+                "property_rights":       { "min": 42, "max": 62 },
+                "government_integrity":  { "min": 45, "max": 65 },
+                "judicial_effectiveness":{ "min": 42, "max": 62 },
+                "tax_burden":            { "min": 42, "max": 62 },
+                "government_spending":   { "min": 35, "max": 55 },
+                "fiscal_health":         { "min": 38, "max": 58 },
+                "business_freedom":      { "min": 45, "max": 65 },
+                "labor_freedom":         { "min": 40, "max": 60 },
+                "monetary_freedom":      { "min": 45, "max": 65 },
+                "trade_freedom":         { "min": 52, "max": 72 },
+                "investment_freedom":    { "min": 45, "max": 65 },
+                "financial_freedom":     { "min": 42, "max": 62 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "santiago_pena",
+              "name": "Santiago Peña",
+              "party_id": "pry_anr_2024",
+              "values": {
+                "property_rights": 48,
+                "government_integrity": 28,
+                "judicial_effectiveness": 28,
+                "tax_burden": 65,
+                "government_spending": 60,
+                "fiscal_health": 55,
+                "business_freedom": 62,
+                "labor_freedom": 58,
+                "monetary_freedom": 62,
+                "trade_freedom": 70,
+                "investment_freedom": 62,
+                "financial_freedom": 58
+              }
+            },
+            {
+              "id": "efrain_alegre",
+              "name": "Efraín Alegre",
+              "party_id": "pry_concertacion_2024",
+              "values": {
+                "property_rights": 52,
+                "government_integrity": 55,
+                "judicial_effectiveness": 52,
+                "tax_burden": 52,
+                "government_spending": 45,
+                "fiscal_health": 48,
+                "business_freedom": 55,
+                "labor_freedom": 50,
+                "monetary_freedom": 55,
+                "trade_freedom": 62,
+                "investment_freedom": 55,
+                "financial_freedom": 52
+              }
+            }
+          ]
+        },
+        {
+          "id": "ecuador",
+          "name": "Ecuador",
+          "capital": "Quito",
+          "region": "América del Sur",
+          "leader_id": "daniel_noboa",
+          "parties": [
+            {
+              "id": "ecu_accion_democratica",
+              "name": "Acción Democrática Nacional",
+              "short": "ADN",
+              "founded": 2023,
+              "ideology": "Centro-derecha / Tecnocracia liberal",
+              "ranges": {
+                "property_rights":       { "min": 48, "max": 68 },
+                "government_integrity":  { "min": 42, "max": 62 },
+                "judicial_effectiveness":{ "min": 40, "max": 60 },
+                "tax_burden":            { "min": 50, "max": 70 },
+                "government_spending":   { "min": 45, "max": 65 },
+                "fiscal_health":         { "min": 38, "max": 58 },
+                "business_freedom":      { "min": 52, "max": 72 },
+                "labor_freedom":         { "min": 48, "max": 68 },
+                "monetary_freedom":      { "min": 52, "max": 72 },
+                "trade_freedom":         { "min": 55, "max": 75 },
+                "investment_freedom":    { "min": 50, "max": 70 },
+                "financial_freedom":     { "min": 48, "max": 68 }
+              }
+            },
+            {
+              "id": "ecu_revolucion_ciudadana",
+              "name": "Revolución Ciudadana (Correísmo)",
+              "short": "RC",
+              "founded": 2006,
+              "ideology": "Socialismo del siglo XXI / Izquierda",
+              "ranges": {
+                "property_rights":       { "min": 20, "max": 40 },
+                "government_integrity":  { "min": 22, "max": 42 },
+                "judicial_effectiveness":{ "min": 15, "max": 35 },
+                "tax_burden":            { "min": 18, "max": 38 },
+                "government_spending":   { "min": 10, "max": 28 },
+                "fiscal_health":         { "min": 10, "max": 28 },
+                "business_freedom":      { "min": 22, "max": 42 },
+                "labor_freedom":         { "min": 18, "max": 38 },
+                "monetary_freedom":      { "min": 28, "max": 48 },
+                "trade_freedom":         { "min": 28, "max": 48 },
+                "investment_freedom":    { "min": 18, "max": 38 },
+                "financial_freedom":     { "min": 15, "max": 35 }
+              }
+            }
+          ],
+          "candidates": [
+            {
+              "id": "daniel_noboa",
+              "name": "Daniel Noboa",
+              "party_id": "ecu_accion_democratica",
+              "values": {
+                "property_rights": 58,
+                "government_integrity": 52,
+                "judicial_effectiveness": 48,
+                "tax_burden": 60,
+                "government_spending": 55,
+                "fiscal_health": 46,
+                "business_freedom": 62,
+                "labor_freedom": 58,
+                "monetary_freedom": 62,
+                "trade_freedom": 65,
+                "investment_freedom": 60,
+                "financial_freedom": 58
+              }
+            },
+            {
+              "id": "luisa_gonzalez",
+              "name": "Luisa González",
+              "party_id": "ecu_revolucion_ciudadana",
+              "values": {
+                "property_rights": 28,
+                "government_integrity": 30,
+                "judicial_effectiveness": 22,
+                "tax_burden": 25,
+                "government_spending": 16,
+                "fiscal_health": 15,
+                "business_freedom": 30,
+                "labor_freedom": 25,
+                "monetary_freedom": 36,
+                "trade_freedom": 35,
+                "investment_freedom": 25,
+                "financial_freedom": 22
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

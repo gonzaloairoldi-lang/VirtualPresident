@@ -5,14 +5,18 @@
   "description": "Simulador geopolítico inspirado en Shadow President (1993)",
   "workspaces": [
     "packages/engine",
-    "packages/web"
+    "packages/web",
+    "packages/api"
   ],
   "scripts": {
-    "dev": "npm run dev -w packages/web",
+    "dev": "npm run dev -w packages/web & npm run dev -w packages/api",
+    "dev:web": "npm run dev -w packages/web",
+    "dev:api": "npm run dev -w packages/api",
     "build": "npm run build -w packages/engine && npm run build -w packages/web",
     "test": "npm run test -w packages/engine",
     "lint": "eslint . --ext .ts,.tsx",
-    "typecheck": "npm run typecheck -w packages/engine && npm run typecheck -w packages/web"
+    "typecheck": "npm run typecheck -w packages/engine && npm run typecheck -w packages/web",
+    "db:seed": "npm run db:init -w packages/api"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.0.0",
