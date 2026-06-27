@@ -4,10 +4,22 @@ import {
   applyAction,
   advanceTurn,
   type GameState,
+  type Country,
 } from "@shadow-president/engine";
 
-export function useGame() {
-  const [state, setState] = useState<GameState>(() => createInitialState());
+export function useGame(initialCountries?: Record<string, Country>) {
+  const [state, setState] = useState<GameState>(() => {
+    const base = createInitialState();
+    if (!initialCountries) return base;
+    return {
+      ...base,
+      countries: {
+        ...initialCountries,
+        // USA siempre viene del engine (es el jugador)
+        USA: base.countries["USA"],
+      },
+    };
+  });
   const [lastMessage, setLastMessage] = useState<string | null>(null);
 
   const doAction = useCallback((actionId: string, targetCountryId: string) => {
@@ -23,9 +35,15 @@ export function useGame() {
   }, []);
 
   const restart = useCallback(() => {
-    setState(createInitialState());
+    const base = createInitialState();
+    setState({
+      ...base,
+      countries: initialCountries
+        ? { ...initialCountries, USA: base.countries["USA"] }
+        : base.countries,
+    });
     setLastMessage(null);
-  }, []);
+  }, [initialCountries]);
 
   return { state, doAction, nextTurn, restart, lastMessage };
 }

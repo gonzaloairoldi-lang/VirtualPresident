@@ -1,69 +1,51 @@
 import { useState } from "react";
-import { useGame } from "./useGame.js";
 import { HeaderBar } from "./components/HeaderBar.js";
 import { WorldMap } from "./components/WorldMap.js";
 import { CountryPanel } from "./components/CountryPanel.js";
 import { EventLog } from "./components/EventLog.js";
+import { ScenarioSelector } from "./components/ScenarioSelector.js";
+import { fetchCountries, REGION_MAP, type ScenarioDTO } from "./api.js";
+import type { Country } from "@shadow-president/engine";
+import { Game } from "./Game.js";
 
 export default function App() {
-  const { state, doAction, nextTurn, restart } = useGame();
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [countries, setCountries] = useState<Record<string, Country> | null>(null);
+  const [loading, setLoading] = useState(false);
 
-  const selectedCountry = selectedId ? state.countries[selectedId] ?? null : null;
-  const countryList = Object.values(state.countries);
+  async function handleSelectScenario(s: ScenarioDTO) {
+    setLoading(true);
+    try {
+      const raw = await fetchCountries(s.id);
+      const mapped: Record<string, Country> = {};
+      for (const c of raw) {
+        const region = (REGION_MAP[c.region] ?? "south_america") as Country["region"];
+        mapped[c.id] = {
+          id: c.id,
+          name: c.name,
+          region,
+          stats: {
+            qualityOfLife: 50,
+            stability: 50,
+            economy: 50,
+            militaryStrength: 50,
+            relationToUS: 50,
+          },
+        };
+      }
+      setCountries(mapped);
+    } finally {
+      setLoading(false);
+    }
+  }
 
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        height: "100vh",
-      }}
-    >
-      <HeaderBar
-        year={state.year}
-        month={state.month}
-        popularity={state.popularity}
-        gameOver={state.gameOver}
-        onNextTurn={nextTurn}
-        onRestart={restart}
+  if (!countries) {
+    return (
+      <ScenarioSelector
+        onSelect={handleSelectScenario}
+        loadingScenario={loading}
       />
+    );
+  }
 
-      {state.gameOver ? (
-        <div
-          style={{
-            flex: 1,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-            gap: "0.5rem",
-          }}
-        >
-          <h2 style={{ fontFamily: "var(--font-display)", color: "var(--paper)" }}>
-            Fin de mandato
-          </h2>
-          <p style={{ color: "var(--paper-dim)", fontFamily: "var(--font-mono)" }}>
-            {state.eventLog[state.eventLog.length - 1]?.message}
-          </p>
-        </div>
-      ) : (
-        <div style={{ display: "flex", flex: 1, minHeight: 0 }}>
-          <WorldMap
-            countries={countryList}
-            selectedId={selectedId}
-            onSelect={setSelectedId}
-          />
-          <CountryPanel
-            country={selectedCountry}
-            onAction={(actionId) => {
-              if (selectedId) doAction(actionId, selectedId);
-            }}
-          />
-        </div>
-      )}
-
-      <EventLog events={state.eventLog} />
-    </div>
-  );
+  return <Game initialCountries={countries} />;
 }
