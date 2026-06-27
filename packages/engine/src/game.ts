@@ -166,5 +166,7 @@ export function advanceTurn(state: GameState): GameState {
 
 export { ACTIONS } from "./actions.js";
 export { INITIAL_COUNTRIES } from "./data/countries.js";
+export { advanceEconomy, calcCountryRisk, calcScoreLider, calcScoreMacro } from "./economy.js";
 export const ACTION_BUDGET = ACTION_BUDGET_PER_TURN;
 export type * from "./types.js";
+export type { EconomyState, EconomicFreedomValues } from "./economy.js";
