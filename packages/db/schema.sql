@@ -139,6 +139,37 @@ CREATE TABLE IF NOT EXISTS actions (
 );
 
 -- ============================================================
+-- ECONOMÍA POR PAÍS Y ESCENARIO (datos semilla / iniciales)
+-- ============================================================
+
+CREATE TABLE IF NOT EXISTS country_economy_seed (
+  country_id   TEXT NOT NULL REFERENCES countries(id),
+  scenario_id  TEXT NOT NULL REFERENCES scenarios(id),
+
+  -- Moneda local
+  tax_revenue        REAL NOT NULL DEFAULT 0,   -- ingresos fiscales mensuales (M moneda local)
+  soe_revenue        REAL NOT NULL DEFAULT 0,   -- ingresos empresas públicas (M moneda local)
+  ministry_spending  REAL NOT NULL DEFAULT 0,   -- gasto total ministerios (M moneda local)
+  local_debt         REAL NOT NULL DEFAULT 0,   -- deuda en moneda local acumulada
+  money_supply       REAL NOT NULL DEFAULT 100, -- masa monetaria base = 100
+  inflation_rate     REAL NOT NULL DEFAULT 0,   -- % mensual
+  exchange_rate_regime TEXT NOT NULL DEFAULT 'float',  -- 'float' | 'fixed'
+  exchange_rate      REAL NOT NULL DEFAULT 1,   -- moneda local por USD
+
+  -- Sector externo (USD)
+  reserves_usd       REAL NOT NULL DEFAULT 0,   -- reservas internacionales
+  exports_usd        REAL NOT NULL DEFAULT 0,   -- exportaciones mensuales
+  imports_usd        REAL NOT NULL DEFAULT 0,   -- importaciones mensuales
+  external_debt_usd  REAL NOT NULL DEFAULT 0,   -- deuda externa
+
+  -- Riesgo país
+  score_historial    REAL NOT NULL DEFAULT 50,  -- 0-100, memoria histórica (cambia lento)
+  default_count      INTEGER NOT NULL DEFAULT 0, -- veces que defaulteó
+
+  PRIMARY KEY (country_id, scenario_id)
+);
+
+-- ============================================================
 -- ESTADO DE PARTIDA (dinámico, se crea al iniciar juego)
 -- ============================================================
 
@@ -194,6 +225,40 @@ CREATE TABLE IF NOT EXISTS structural_interests (
   to_country   TEXT NOT NULL REFERENCES countries(id),
   value        REAL NOT NULL,   -- 0-100
   PRIMARY KEY (game_id, from_country, to_country)
+);
+
+-- Estado económico de cada país en la partida (evoluciona cada turno)
+CREATE TABLE IF NOT EXISTS game_economy (
+  game_id      TEXT NOT NULL REFERENCES games(id),
+  country_id   TEXT NOT NULL REFERENCES countries(id),
+
+  -- Moneda local
+  tax_revenue        REAL NOT NULL DEFAULT 0,
+  soe_revenue        REAL NOT NULL DEFAULT 0,
+  ministry_spending  REAL NOT NULL DEFAULT 0,
+  fiscal_balance     REAL NOT NULL DEFAULT 0,   -- calculado: ingresos - egresos
+  local_debt         REAL NOT NULL DEFAULT 0,
+  money_supply       REAL NOT NULL DEFAULT 100,
+  inflation_rate     REAL NOT NULL DEFAULT 0,
+  exchange_rate_regime TEXT NOT NULL DEFAULT 'float',
+  exchange_rate_official REAL NOT NULL DEFAULT 1,
+  exchange_rate_parallel REAL,                  -- NULL si no hay brecha
+
+  -- Sector externo (USD)
+  reserves_usd       REAL NOT NULL DEFAULT 0,
+  exports_usd        REAL NOT NULL DEFAULT 0,
+  imports_usd        REAL NOT NULL DEFAULT 0,
+  trade_balance      REAL NOT NULL DEFAULT 0,   -- calculado: exports - imports
+  external_debt_usd  REAL NOT NULL DEFAULT 0,
+
+  -- Riesgo país (calculado cada turno)
+  country_risk       REAL NOT NULL DEFAULT 50,  -- 0-100 (100 = máximo riesgo)
+  score_historial    REAL NOT NULL DEFAULT 50,
+  score_macro        REAL NOT NULL DEFAULT 50,
+  score_lider        REAL NOT NULL DEFAULT 50,
+  default_count      INTEGER NOT NULL DEFAULT 0,
+
+  PRIMARY KEY (game_id, country_id)
 );
 
 -- Log de eventos de la partida

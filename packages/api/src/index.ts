@@ -53,6 +53,14 @@ app.get("/scenarios/:scenarioId/countries/:countryId/government", (c) => {
   return c.json(rows.map((r) => ({ ...r, ef_values: JSON.parse(r.ef_values) })));
 });
 
+app.get("/scenarios/:scenarioId/countries/:countryId/economy", (c) => {
+  const row = getDb().prepare(
+    `SELECT * FROM country_economy_seed WHERE country_id = ? AND scenario_id = ?`
+  ).get(c.req.param("countryId"), c.req.param("scenarioId"));
+  if (!row) return c.json({ error: "not found" }, 404);
+  return c.json(row);
+});
+
 app.get("/ministries/:id/actions", (c) => {
   const rows = getDb().prepare(
     "SELECT * FROM actions WHERE ministry_id = ?"
